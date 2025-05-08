@@ -1,0 +1,445 @@
+
+
+
+
+  
+/* Header */
+header {border: 3px solid ;margin: auto;padding: 2rem;background-color: antiquewhite;display: grid;grid-template-columns: repeat(3,1fr);grid-template-rows: repeat(1,1fr);}
+
+
+
+.headname {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.5rem;justify-content: center;grid-row: 1/2;grid-column: 2/3;}
+
+.divnav {grid-row: 1/2;grid-column: 3/4;align-content: center;justify-content: space-around;font-size: xx-large;font-weight: 200;text-decoration: none;color: black;display: grid;}
+
+.orignav {display: flex;gap: 2rem;}
+
+.orignav1 {text-decoration: none;grid-area: 15px;color: black;}
+.orignav2 {text-decoration: none;color: black;}
+.orignav3 {text-decoration: none;color: black;}
+.orignav4 {text-decoration: none;color: black;gap: 15px;}
+
+.subh {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1rem;display: grid;grid-area: -3/-3/3/-2;;}
+.hdds { grid-area: 2/2/-3/-2;display: grid;align-self: self-end; margin-top: 10rem;}
+
+/*background image */
+
+.animated-background {
+  width: 100%;
+  height: 400px; /* Only occupy a section */
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 800% 800%;
+  animation: moveBackground 10s ease infinite;
+  border-radius: 20px; /* optional: to make it softer */
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+ 
+
+/* project section*/
+
+.projectimg {display: flex;justify-content: space-evenly;border: 1px solid;margin: 2rem;padding: 2rem;flex-direction: row;flex-wrap: wrap;background-color: antiquewhite;}
+
+.headingpro {width: auto;display: flex;font-size: xx-large;justify-content: center;margin: 5rem;padding: 2rem;border-radius: 2%;border: 1px;background-color: antiquewhite;}
+
+/*welcomimg section */
+.Hero {margin: 1.5rem;margin-right: auto;}
+.welcomed {margin-right: auto;display: flex;padding: 1rem;width: 30rem;border: 1px dotted;padding: 2rem;border-radius: 1.5rem;background-color: aliceblue;}
+.welcomeme {padding: 1rem;font-size: x-large;}
+
+/* About sections */
+.aboutdiv {width: 40rem;display: flex;padding: 2%;margin-right: auto;border: 1px solid;border-radius: 2rem;background-color: antiquewhite;}
+.aboutme {margin: 1rem;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.About {margin: 1.5rem;margin-right: auto;display: flex;}
+.aboutdiv11 {padding: 1rem;font-size: 2rem;width: 50%;}
+
+/* Aside arranfging */
+.divimage {display: flex;align-content: space-evenly;padding: 1rem;gap: 3rem;border: 1px solid black;margin: 1rem;content: normal;width: 60rem;height: auto;;
+}
+.asideimage1 {width: 20%;border: 1px solid;border-radius: 50%;}
+.asideimage2 {width: 20%;border: 1px solid;border-radius: 50%;}
+.pg {font-size: xx-large;font-style: oblique;}
+
+aside {display: flex;}
+.shit {font-size: 2rem;width:auto; }
+.Hero {display: flex;justify-content: space-evenly;}
+
+
+/* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+    header {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .headname {
+      grid-column: 1 / -1; /* Span the entire width */
+      text-align: center;
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .divnav {
+      grid-column: 1 / -1; /* Span the entire width */
+      justify-content: center;
+      text-align: center;
+      font-size: medium; /* Adjust font size */
+    }
+  
+    .orignav {
+      flex-direction: column; /* Stack navigation links vertically */
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+  
+  /* Media query for medium screens (e.g., tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    header {
+      grid-template-columns: 1fr 1fr; /* Two-column layout for tablets */
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .headname {
+      grid-column: 1 / 2; /* Place in the first column */
+      text-align: center;
+      font-size: 1.5rem; /* Slightly larger font size */
+    }
+  
+    .divnav {
+      grid-column: 2 / 3; /* Place in the second column */
+      justify-content: center;
+      text-align: center;
+      font-size: large;
+    }
+  
+    .orignav {
+      flex-direction: row; /* Horizontal navigation */
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+  
+  /* Media query for large screens (e.g., desktops) */
+  @media (min-width: 1025px) {
+    header {
+      grid-template-columns: repeat(3, 1fr); /* Three-column layout for desktops */
+      text-align: left;
+      padding: 2rem;
+    }
+  
+    .headname {
+      grid-column: 2 / 3; /* Center column */
+      text-align: center;
+      font-size: 2rem; /* Larger font size */
+    }
+  
+    .divnav {
+      grid-column: 3 / 4; /* Right column */
+      justify-content: flex-end;
+      text-align: right;
+      font-size: x-large;
+    }
+  
+    .orignav {
+      flex-direction: row; /* Horizontal navigation */
+      gap: 2rem;
+      justify-content: flex-end;
+    }
+  }
+
+  /* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .Hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+    }
+  
+    .welcomed {
+      width: 90%;
+      padding: 1rem;
+      font-size: medium;
+      margin: 0 auto;
+    }
+  
+    .welcomeme {
+      font-size: large;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for medium screens (e.g., tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .Hero {
+      flex-direction: column;
+      align-items: center;
+      margin: 1.5rem auto;
+    }
+  
+    .welcomed {
+      width: 80%;
+      padding: 1.5rem;
+      font-size: large;
+      margin: 0 auto;
+    }
+  
+    .welcomeme {
+      font-size: x-large;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for large screens (e.g., desktops) */
+  @media (min-width: 1025px) {
+    .Hero {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 1.5rem auto;
+    }
+  
+    .welcomed {
+      width: 30rem;
+      padding: 2rem;
+      font-size: large;
+    }
+  
+    .welcomeme {
+      font-size: x-large;
+      text-align: left;
+    }
+  }
+
+  /* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+  .aboutdiv {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutme {
+    margin: 0.5rem;
+    font-size: medium;
+    text-align: center;
+  }
+
+  .aboutdiv11 {
+    width: 100%;
+    font-size: large;
+    padding: 0.5rem;
+  }
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .aboutdiv {
+    width: 80%;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutme {
+    margin: 1rem;
+    font-size: large;
+    text-align: center;
+  }
+
+  .aboutdiv11 {
+    width: 80%;
+    font-size: x-large;
+    padding: 1rem;
+  }
+}
+
+/* Media query for large screens (e.g., desktops) */
+@media (min-width: 1025px) {
+  .aboutdiv {
+    width: 40rem;
+    padding: 2%;
+    margin: 1.5rem auto;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .aboutme {
+    margin: 1rem;
+    font-size: large;
+    text-align: left;
+  }
+
+  .aboutdiv11 {
+    width: 50%;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .divimage {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .asideimage1, .asideimage2 {
+      width: 80%;
+      margin: auto;
+      border-radius: 10%;
+    }
+  
+    .pg {
+      font-size: large;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for medium screens (e.g., tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .divimage {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 90%;
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+  
+    .asideimage1, .asideimage2 {
+      width: 40%;
+      margin: auto;
+      border-radius: 20%;
+    }
+  
+    .pg {
+      font-size: x-large;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for large screens (e.g., desktops) */
+  @media (min-width: 1025px) {
+    .divimage {
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 60rem;
+      gap: 3rem;
+      padding: 2rem;
+    }
+  
+    .asideimage1, .asideimage2 {
+      width: 20%;
+      border-radius: 50%;
+    }
+  
+    .pg {
+      font-size: xx-large;
+      text-align: left;
+    }
+  }
+
+  /* Footer */
+footer {grid-area: footer;
+  background-color: #2a5f8b;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.social_links {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social_links p {
+  margin: 0;
+}
+
+.social_links a {
+  margin-left: 1rem;
+}
+
+.social_links img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .Adventure {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .his {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+      flex-direction: column;
+      padding: 1rem;
+  }
+  
+  .navid {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+  }
+  
+  .hero h1 {
+      font-size: 2rem;
+  }
+  
+  .Adventure {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .social_links {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  
+  .social_links a {
+      margin: 0 0.5rem;
+  }
+}
+
+
+.artimage1 {width: 20%;border: 1px solid;border-radius: 50%;}
+.artimage2 {width: 20%;border: 1px solid;border-radius: 50%;}
+.artimage3 {width: 20%;border: 1px solid;border-radius: 50%;}
+.artimage4 {width: 20%;border: 1px solid;border-radius: 0%;}
+.artimage5 {width: 20%;border: 1px solid;border-radius: 50%;}
+.artimage6 {width: 20%;border: 1px solid;border-radius: 50%;}
+
+.div2-article {display: flex;align-content: space-evenly;padding: 1rem;gap: 3rem;margin: 1rem;content: normal;width: 80rem;height: auto;}
+
+.art1 {width: auto;border: 1px solid;font-size: xx-large;}
+
+@media {max-width: 375px;} {
+  
+}
